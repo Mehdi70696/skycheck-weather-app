@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}About — SkyCheck{% endblock %}
+{% block body_class %}default{% endblock %}
+
+{% block content %}
+<div class="about-page">
+  <h1>About SkyCheck</h1>
+  <p>SkyCheck is a real-time weather information application built with Python Flask.
+     It retrieves live weather data from the
+     <a href="https://openweathermap.org" target="_blank" rel="noopener">OpenWeatherMap API</a>
+     and presents it through a clean, responsive interface.</p>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Current temperature, feels-like, humidity, wind speed, pressure, and visibility</li>
+    <li>5-day daily forecast with high/low temperatures and precipitation probability</li>
+    <li>Weather condition icons and dynamic background colours</li>
+    <li>Celsius / Fahrenheit toggle (no page reload)</li>
+    <li>Timezone-aware local time display for the searched city</li>
+    <li>Graceful error handling for unknown cities and network issues</li>
+  </ul>
+
+  <h2>Data Source</h2>
+  <p>Weather data is provided by <a href="https://openweathermap.org" target="_blank" rel="noopener">
+     OpenWeatherMap</a>. Data is cached server-side for five minutes to reduce API calls.
+     For safety-critical decisions, always consult your national meteorological service
+     (e.g. <a href="https://www.metoffice.gov.uk" target="_blank" rel="noopener">UK Met Office</a>).</p>
+
+  <h2>Privacy</h2>
+  <p>SkyCheck collects no personal data. No cookies are set, no analytics are gathered,
+     and no data is transmitted to any third party beyond the city name you search for.</p>
+
+  <h2>Technology Stack</h2>
+  <ul>
+    <li>Backend: Python 3.10+, Flask 3.x</li>
+    <li>Data: OpenWeatherMap Current Weather &amp; 5-Day Forecast APIs</li>
+    <li>Frontend: HTML5, CSS3 (custom properties, Flexbox/Grid), Vanilla JavaScript</li>
+    <li>Configuration: python-dotenv for API key management</li>
+  </ul>
+</div>
+{% endblock %}
